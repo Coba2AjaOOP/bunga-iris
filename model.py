@@ -6,7 +6,7 @@ import joblib
 
 seed = 42
 
-iris_df = pd.read_csv("C:/Users/nardi/ALL IMA FOLDERS/Teaching/Week13_new/Deploy_Ima/Iris.csv")
+iris_df = pd.read_csv("Iris.csv")
 iris_df.sample(frac=1, random_state=seed)
 
 X = iris_df[['SepalLengthCm', 'SepalWidthCm', 'PetalLengthCm', 'PetalWidthCm']]
@@ -23,5 +23,6 @@ y_pred = clf.predict(X_test)
 
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Accuracy: {accuracy}")  
+
 
 joblib.dump(clf, "rf_model.sav")
