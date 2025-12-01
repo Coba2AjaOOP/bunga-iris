@@ -6,7 +6,7 @@ import joblib
 
 seed = 42
 
-iris_df = pd.read_csv("week 13/iris.csv")
+iris_df = pd.read_csv("week 13/Iris.csv")
 iris_df.sample(frac=1, random_state=seed)
 
 x = iris[['SepalLengthCm', 'SepalWidthCm', 'PetalLengthCm', 'PetalWidthCm']]
