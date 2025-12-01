@@ -9,7 +9,7 @@ seed = 42
 iris_df = pd.read_csv("Iris.csv")
 iris_df.sample(frac=1, random_state=seed)
 
-x = iris[['SepalLengthCm', 'SepalWidthCm', 'PetalLengthCm', 'PetalWidthCm']]
+x = iris_df[['SepalLengthCm', 'SepalWidthCm', 'PetalLengthCm', 'PetalWidthCm']]
 y = iris_df[['Species']]
 
 X_train, X_test, y_train, y_test = train_test_split(X,y, test_size=0.3, random_state=seed, stratify=y)
